@@ -7,7 +7,7 @@ const mongoose 	 = require('mongoose');
 const config     = require('./server/config');
 
 // Initiate mongodb
-const urlSchema  = require('./server/api/urls');
+const urlSchema  = require('./server/api/urlsdatabase');
 mongoose.connect(config.mongodb.url, {
 	useMongoClient: true,
 }); 

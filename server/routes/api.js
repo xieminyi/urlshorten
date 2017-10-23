@@ -14,8 +14,4 @@ router.post('/api/create', operations.create_a_url);
 // Random key
 router.get('/api/generateShortCode', shortKey.generate_short_code);
 
-router.get('/', (req, res) => {
-  res.status(200).end();
-});
-
 module.exports = router;
