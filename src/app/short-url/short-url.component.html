@@ -1,0 +1,29 @@
+<div class="container">
+  	<form class="form-horizontal">
+	    <div class="form-group">
+	    	<label class="control-label col-sm-2" for="original-url">Enter your long url: </label>
+		    <div class="col-sm-10">
+		      <input type="original-url" class="form-control" name="query" [(ngModel)]="query" (keyup.enter)="submit()">
+		    </div>
+	    </div>
+	    <div class="form-group">
+	    	<label class="control-label col-sm-2" for="prefer-name">Enter your prefer name: </label>
+		    <div class="col-sm-10">
+		      <input type="prefer-name" class="form-control" name="nickname" [(ngModel)]="nickname" (keyup.enter)="submit()">
+		    </div>
+	    </div>
+	    <div class="form-group"> 
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="button" (click)="submit()" class="btn btn-default">Submit</button>
+		    </div>
+		</div>
+  	</form>
+  	<br /><br />
+  	<div class="container">
+		<ul class="list-group">
+		  	<li class="list-group-item">Original Url: {{ query }}</li>
+		  	<li class="list-group-item">Shorted Url: {{ result }}</li>
+		  	<li class="list-group-item">Warning: {{ warning }}</li>
+		</ul>
+	</div>  
+</div>

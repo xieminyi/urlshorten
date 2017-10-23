@@ -1,0 +1,18 @@
+[
+      {
+            key: "abc",
+            url: "http://minyixie/12345/abcde/54321?name=23"
+      },
+      {
+            key: "abc1",
+            url: "http://minyixie/12345/abcde/54321?name=1"
+      },
+      {
+            key: "abc2",
+            url: "http://minyixie/12345/abcde/54321?name=2"
+      },
+      {
+            key: "abc3",
+            url: "http://minyixie/12345/abcde/54321?name=3"
+      },
+]
