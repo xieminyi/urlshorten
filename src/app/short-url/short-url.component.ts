@@ -11,11 +11,18 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./short-url.component.css']
 })
 export class ShortUrlComponent implements OnInit, OnDestroy {
-	query: string;
+	// variables for shorten
+  query: string;
 	nickname: string;
 	result: string;
   warning: string;
 
+  // variables for infale
+  shorturl: string;
+  longurl: string; 
+  warningInflate: string;
+
+  // variables for redirection
   private key: string;
   private sub: any;
 
@@ -84,4 +91,21 @@ export class ShortUrlComponent implements OnInit, OnDestroy {
       );
     }
 	}
+
+  getOriginal(): void {
+    this.warningInflate = '';
+    this.longurl = '';
+
+    let key = this.shorturl.split('/')[3].trim();
+    this.databaseService.getUsedKey(key).subscribe(
+      data => { 
+        if(data && data.length>0) this.longurl = data[0].original_url;
+        else this.warningInflate = `This url ${this.shorturl} does not exist.`
+      },
+      err => {
+        // operations for errors.
+        // Options: 1) log file 2) Action on page
+      }
+    );
+  }
 }
