@@ -13,8 +13,8 @@ exports.generate_short_code = function(req, res) {
     });
     res.json({newKey: uuid.toLowerCase()});
   } catch (err){
-    // Log err and time to log file /var/log/myserver.log
     res.send('Could not decode request: Internal error');
+    // or Log err and time to log file /var/log/myserver.log
   }
 }
 

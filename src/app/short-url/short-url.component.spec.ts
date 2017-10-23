@@ -57,13 +57,13 @@ describe('ShortUrlComponent', () => {
     fixtureShortCode.detectChanges();
   });
 
-  it('should querying new key when a term is set and submit is called', () => {
+  it('should querying new key when no nickname and submit is called', () => {
     component = fixtureShortCode.debugElement.componentInstance;
     component.submit();
     expect(mockShortCodeService.getShortCodeSpy).toHaveBeenCalledWith();
   });
 
-  it('should get used key and its original url from database when a nickname is set and submit is called', () => {
+  it('should search key in database when a nickname is set and submit is called', () => {
     component = fixtureShortCode.debugElement.componentInstance;
     component.nickname = 'abc';
     component.submit();

@@ -27,6 +27,7 @@ export class ShortUrlComponent implements OnInit, OnDestroy {
   ) { }
 
 	ngOnInit() {
+    // Redirection if parameteor is available
     this.sub = this.route.params.subscribe(params => {
       this.key = params['key'];
       if(this.key){

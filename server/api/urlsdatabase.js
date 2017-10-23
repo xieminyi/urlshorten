@@ -1,12 +1,15 @@
 'use strict';
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 
-var urlSchema = new Schema({
+const urlSchema = new Schema({
+  // key is used in short url: random key or prefered nickname
   key: {
     type: String
   },
+  // long url
   original_url: {
     type: String
   },

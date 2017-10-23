@@ -20,10 +20,6 @@ export class DatabaseService {
 		return this.findRecord(name).map(data => data);
   	}
 
-  	getOriginalUrl(key: string): Observable<any> {
-		return this.findRecord(key).map(data => data);
-  	}
-
   	createKey(key: string, originalUrl: string){
 		return this.createRecord(key, originalUrl);
   	}
