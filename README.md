@@ -28,3 +28,13 @@ Mongodb is used for this app, and its link is set in /server/config.js. Please f
 
 Domain name is set in Angular evironment folder. "http://localhost:3000" is used for dev server. 
 
+##  Project structure
+
+Backend /server
+
+Frontend /src
+
+Testing frontend /e2e
+
+Testing backend /test
+
